@@ -19,12 +19,15 @@ var rotate = function(nums, k) {
 console.log(rotate([1,2,3,4,5,6,7],2));
 
 // OR
+// this solution says aslong as i is less than k
+// pop out the last element in the array and put in the front
+// finally return the rearranged Array
 var rotate=function(nums, k)
 {
     for(var i=0; i<k; i++)
         {
-            var pop=nums.pop();
-            nums.unshift(pop);
+            var pop=nums.pop(); //pop removes from the back of an array
+            nums.unshift(pop); // unshift add to the front off an array
         }
     return nums;
 }
